@@ -5,15 +5,23 @@ import styled from "styled-components";
 const TimeContainer = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   font-family: Oxanium, cursive;
   font-size: 7em;
   width: 100%;
   background-color: black;
-  color: #05d9e8;
+  color: #53c0df;
   border: solid;
   border-color: #ffef00;
   border-radius: 5px;
   padding: 1%;
+
+  @media screen and (max-width: 830px) {
+    font-size: 4em;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 2em;
+  }
 `;
 
 const NumberContainer = styled.div``;
@@ -36,7 +44,6 @@ export default class CountdownVisualizer extends Component {
   calculateTimeLeft = () => {
     const { endTime } = this.props;
     let difference = +new Date(endTime) - +new Date();
-    console.log(difference);
 
     if (difference > 0) {
       this.setState({
@@ -64,9 +71,7 @@ export default class CountdownVisualizer extends Component {
 
   render() {
     const { days, hours, minutes, seconds } = this.state.timeLeft;
-
     if (seconds === undefined) return null;
-
     return (
       <TimeContainer>
         <NumberContainer>

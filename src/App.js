@@ -23,7 +23,9 @@ export default class App extends Component {
         {/* <div className='input-container'>
           <DateTimePicker getEndTime={this.getEndTime} />
         </div> */}
-        <div>{endTime && <CountdownVisualizer endTime={endTime} />}</div>
+        <div className='countdown-container'>
+          {endTime && <CountdownVisualizer endTime={endTime} />}
+        </div>
       </div>
     );
   }
