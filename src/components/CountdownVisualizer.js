@@ -5,16 +5,24 @@ import styled from "styled-components";
 const TimeContainer = styled.div`
   display: flex;
   flex-direction: row;
-  font-family: Helvetica, sans-serif;
-  width: 50%;
-  justify-content: space-between;
+  font-family: Oxanium, cursive;
+  font-size: 7em;
+  width: 100%;
+  background-color: black;
+  color: #05d9e8;
+  border: solid;
+  border-color: #ffef00;
+  border-radius: 5px;
+  padding: 1%;
 `;
 
-const NumberContainer = styled.span`
-  font-family: Oxanium, cursive;
-  font-size: 1.5em;
-  background-color: black;
-  padding: 15%;
+const NumberContainer = styled.div``;
+
+const LetterContainer = styled.div`
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  font-size: 0.2em;
 `;
 
 export default class CountdownVisualizer extends Component {
@@ -62,10 +70,23 @@ export default class CountdownVisualizer extends Component {
     return (
       <TimeContainer>
         <NumberContainer>
-          {String(days).length < 2 ? `0${days}` : `${days}`}|
-          {String(hours).length < 2 ? `0${hours}` : `${hours}`}|
-          {String(minutes).length < 2 ? `0${minutes}` : `${minutes}`}|
+          {String(days).length < 2 ? `0${days}` : `${days}`}
+          <LetterContainer>D</LetterContainer>
+        </NumberContainer>
+        |
+        <NumberContainer>
+          {String(hours).length < 2 ? `0${hours}` : `${hours}`}
+          <LetterContainer>H</LetterContainer>
+        </NumberContainer>
+        |
+        <NumberContainer>
+          {String(minutes).length < 2 ? `0${minutes}` : `${minutes}`}
+          <LetterContainer>M</LetterContainer>
+        </NumberContainer>
+        |
+        <NumberContainer>
           {String(seconds).length < 2 ? `0${seconds}` : `${seconds}`}
+          <LetterContainer>S</LetterContainer>
         </NumberContainer>
       </TimeContainer>
     );
