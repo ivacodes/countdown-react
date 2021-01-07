@@ -18,13 +18,13 @@ body {
 }
 
 .input-container {
-  margin-bottom: 2%;
+  margin: 2%;
 }
 
-img {
+/* img {
   max-width: 100%;
   height: auto;
-}
+} */
 
 .countdown-container {
   max-width: 100%;
