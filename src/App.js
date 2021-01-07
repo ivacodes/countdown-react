@@ -6,6 +6,7 @@ import "./App.css";
 export default class App extends Component {
   state = {
     endTime: "",
+    // to set initial time, use 2021-11-19T00:01 format
   };
 
   getEndTime = (endTime) => {
