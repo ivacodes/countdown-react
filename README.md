@@ -10,4 +10,8 @@ npm install
 
 ## to run
 
+```cmd
+npm start
+```
+
 ## usage
