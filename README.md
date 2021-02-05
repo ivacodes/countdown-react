@@ -18,6 +18,10 @@ npm start
 
 Import Component
 
+```React
+import CountdownVisualizer from "./components/CountdownVisualizer";
+```
+
 Use
 
 ### Props
