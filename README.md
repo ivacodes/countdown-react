@@ -24,4 +24,8 @@ import CountdownVisualizer from "./components/CountdownVisualizer";
 
 Use
 
+```React
+<CountdownVisualizer />
+```
+
 ### Props
