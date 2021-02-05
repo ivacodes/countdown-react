@@ -33,3 +33,7 @@ Use
 #### Required props
 
 Endtime in 2021-11-19T00:01 format, this can be inputed with a date time picker input
+
+```cmd
+<CountdownVisualizer endTime={endTime} />
+```
