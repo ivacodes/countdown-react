@@ -15,3 +15,9 @@ npm start
 ```
 
 ## usage
+
+Import Component
+
+Use
+
+### Props
